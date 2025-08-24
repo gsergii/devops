@@ -1,2 +1,2 @@
 # devops
-init repo
+This is just an init repo
