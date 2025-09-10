@@ -7,4 +7,6 @@ RUN pip install -r requirments.txt
 
 COPY . .
 
-CMD ["python", "converter.py"]
+EXPOSE 8000
+
+CMD ["python", "app.py"]
