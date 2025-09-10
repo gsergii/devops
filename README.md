@@ -20,9 +20,9 @@ Make sure you have **Docker** installed on your computer. If not, you can find t
 Navigate to the project directory and run this command in your terminal. It will forge all our files into a magical artifact (a Docker image).
 
 ```bash
-git clone https://github.com/gsergii/devops/tree/main/converter
+git clone https://github.com/gsergii/devops.git
 
-cd converter
+cd devops/converter
 
 docker build -t converter .
 ```
