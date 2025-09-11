@@ -1,0 +1,6 @@
+name: Deploy Converter
+
+on:
+  push:
+    branches:
+      - main
