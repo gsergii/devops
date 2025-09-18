@@ -1,6 +1,6 @@
 # Stage 1: The Builder Stage
 # We'll use a larger Python image to install dependencies
-FROM python:3.9 as builder
+FROM python:3.9 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
