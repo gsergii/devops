@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy the requirements file and install dependencies
 # This creates a layer that can be cached, speeding up future builds
 COPY requirements.txt .
-RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+RUN pip wheel --no-cache-dir --wheel-dir /usr/src/app/wheels -r requirements.txt
 
 
 # Stage 2: The Final Stage
