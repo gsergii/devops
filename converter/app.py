@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import requests
+import os
 
 # URL free API for exchange rates
 # we are using free API from ExchangeRate-API.
@@ -43,6 +44,11 @@ def convert_currency(rates, amount, from_currency, to_currency):
     return converted_amount
 
 # web interface
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     rates = get_exchange_rates()
